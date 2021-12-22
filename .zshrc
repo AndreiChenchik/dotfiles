@@ -2,7 +2,7 @@ export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:$PATH
 export PATH="$HOME/.deta/bin:$PATH"
 export PATH="$HOME/scripts/bin:$PATH"
 
-export ZSH="/Users/gumlooter/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 plugins=(zsh-autosuggestions copydir copyfile history)
 
@@ -11,12 +11,10 @@ source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 
-alias update_all="brew upgrade && mas reset && mas upgrade && softwareupdate --list --force && softwareupdate --download"
-alias dev="cd ~/Documents/Developer"
-alias eops="cd ~/Documents/enableOps"
-
-export OP_HOST="my.1password.com"
-export OP_VAULT="environment"
+alias macup="brew upgrade && mas reset && mas upgrade && softwareupdate --list --force && softwareupdate --download"
+alias dev="cd $HOME/Documents/Developer"
+alias eops="cd $HOME/Documents/enableOps"
+alias dfs='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 opApps=(flask packer deta deta-update-environment python)
 
@@ -55,4 +53,3 @@ for app in ${opApps[@]}; do
     }
   "
 done
-alias dotfiles='/usr/bin/git --git-dir=/Volumes/External/Users/gumlooter/.dotfiles/ --work-tree=/Volumes/External/Users/gumlooter'
