@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/AndreiChenchik/dotfiles/HEAD/.scripts/macos_setup.sh)"
 
 echo "Make sure you are logged in into AppStore already"
 read -p "Press enter to continue"
