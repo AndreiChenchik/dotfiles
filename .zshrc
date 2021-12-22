@@ -19,6 +19,7 @@ export PATH="$HOME/.scripts/bin:$PATH"
 alias dev="cd $HOME/Documents/Developer"
 alias eops="cd $HOME/Documents/enableOps"
 
+# https://www.atlassian.com/git/tutorials/dotfiles
 alias dfs='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 alias macup="brew upgrade\
