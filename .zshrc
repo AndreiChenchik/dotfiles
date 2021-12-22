@@ -37,8 +37,8 @@ brw() {
 }
 
 alias macup="brew update && brew update\
- && brew bundle install --file="${HOME}/.Brewfile"\
+ && brew bundle install --file=${HOME}/.Brewfile\
  && mas reset && mas upgrade\
  && softwareupdate --list --force\
  && softwareupdate --download\
- && brew bundle cleanup --file="${HOME}/.Brewfile"
+ && brew bundle cleanup --file=${HOME}/.Brewfile"
