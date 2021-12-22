@@ -22,8 +22,23 @@ alias eops="cd $HOME/Documents/enableOps"
 # https://www.atlassian.com/git/tutorials/dotfiles
 alias dfs='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-alias macup="brew upgrade\
- && brew bundle dump -f --file $HOME/Brewfile\
+# https://github.com/Homebrew/brew/issues/3933
+brw() {
+  local dump_commands=('install' 'uninstall')
+  local main_command="${1}"
+
+  brew ${@}
+
+  for command in "${dump_commands[@]}"; do
+    if [[ "${command}" == "${main_command}" ]]; then
+        brew bundle dump --file="${HOME}/.Brewfile" --force
+    fi
+  done
+}
+
+alias macup="brew update && brew update\
+ && brew bundle install --file="${HOME}/.Brewfile"\
  && mas reset && mas upgrade\
  && softwareupdate --list --force\
- && softwareupdate --download"
+ && softwareupdate --download\
+ && brew bundle cleanup --file="${HOME}/.Brewfile"

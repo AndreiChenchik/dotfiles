@@ -13,10 +13,6 @@ sudo xcodebuild -license accept
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 brew update
-brew bundle install -f $HOME/Brewfile
-
-# Install ohmyzsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Setup git
 git config --global user.name "Andrei Chenchik"
@@ -31,6 +27,12 @@ config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
 xargs -I{} mv {} .config-backup/{}
 config checkout
 config config --local status.showUntrackedFiles no
+
+# Install sowftware
+brew bundle install -f $HOME/.Brewfile
+
+# Install ohmyzsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # macOS Config
 defaults write com.apple.screensaver askForPassword -int 1
