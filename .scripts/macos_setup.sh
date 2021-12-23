@@ -42,6 +42,8 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write com.apple.Finder AppleShowAllFiles true
+defaults -currentHost write -g AppleFontSmoothing -int 1
+
 killall Finder
 
 # 1Password Login
