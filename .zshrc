@@ -36,7 +36,7 @@ brw() {
   done
 }
 
-alias macup="brew update && brew update\
+alias macup="brew update && brew upgrade\
  && mas reset && mas upgrade\
  && softwareupdate --download --force\
  && brew bundle cleanup --file=${HOME}/.Brewfile --force"
