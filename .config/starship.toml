@@ -47,6 +47,7 @@ symbol = " "
 
 [package]
 symbol = " "
+disabled = true
 
 [perl]
 symbol = " "
