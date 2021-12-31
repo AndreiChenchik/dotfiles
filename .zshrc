@@ -10,8 +10,10 @@ source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 # https://direnv.net
 eval "$(direnv hook zsh)"
+# https://python-poetry.org
+export PATH="$HOME/.poetry/bin:$PATH"
 # https://github.com/AndreiChenchik/env-wrapper
-env_wrapped=(flask packer deta deta-update-environment python)
+env_wrapped=(uvicorn docker-run-with-env deta deta-upd-env-prod deta-upd-env-dev)
 source $HOME/.env-wrapper/activate.sh
 
 export PATH="$HOME/.scripts/bin:$PATH"
@@ -39,4 +41,7 @@ brw() {
 alias macup="brew update && brew upgrade\
  && mas reset && mas upgrade\
  && softwareupdate --download --force\
+ && poetry self update\
  && brew bundle cleanup --file=${HOME}/.Brewfile --force"
+
+
