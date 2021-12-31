@@ -13,6 +13,7 @@ sudo xcodebuild -license accept
 # Setup brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
+brew analytics off
 brew update
 
 # Setup git
@@ -31,6 +32,9 @@ config config --local status.showUntrackedFiles no
 
 # Install sowftware
 brew bundle install -f $HOME/.Brewfile
+
+# Install poetry
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
 # Install ohmyzsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

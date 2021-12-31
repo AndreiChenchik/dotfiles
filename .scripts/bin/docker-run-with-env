@@ -1,0 +1,19 @@
+#!/bin/bash
+
+envFile="./.docker-env"
+
+if [[ ! -z $DOCKER_ENVS ]]; then
+  for envVar in $(echo $DOCKER_ENVS | sed "s/,/ /g")
+  do
+    if [[ "${!envVar}" != "" ]]; then
+      envVarValue=${!envVar}
+      echo "$envVar=$envVarValue" >> ${envFile}
+    fi
+  done
+
+  docker run --env-file=$envFile "$@"
+  rm "$envFile"
+else
+  echo "Don't know what envs"
+  exit 1
+fi

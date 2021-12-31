@@ -1,0 +1,27 @@
+#!/bin/bash
+
+envFile="./.deta-envs"
+detaFolder="./.deta-env-update"
+
+if [[ ! -z $DETA_ENVS ]]; then
+  mkdir -p $detaFolder
+  cd $detaFolder 
+  deta clone --name $1 .
+
+  for envVar in $(echo $DETA_ENVS | sed "s/,/ /g")
+  do
+    if [[ "${!envVar}" != "" ]]; then
+      envVarValue=${!envVar}
+      echo "$envVar=$envVarValue" >> "${envFile}"
+    fi
+  done
+
+  deta update -e "$envFile"
+  rm "$envFile"
+
+  cd ..
+  rm -rf $detaFolder
+else
+  echo "Don't know what envs"
+  exit 1
+fi
