@@ -15,6 +15,7 @@ export PATH="$HOME/.poetry/bin:$PATH"
 # https://github.com/AndreiChenchik/env-wrapper
 env_wrapped=(uvicorn docker-run-with-env deta deta-upd-env-prod deta-upd-env-dev)
 source $HOME/.env-wrapper/activate.sh
+source $HOME/.scripts/1penv.sh
 
 export PATH="$HOME/.scripts/bin:$PATH"
 
@@ -25,23 +26,10 @@ alias eops="cd $HOME/Documents/enableOps"
 alias dfs='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # https://github.com/Homebrew/brew/issues/3933
-brw() {
-  local dump_commands=('install' 'uninstall')
-  local main_command="${1}"
-
-  brew ${@}
-
-  for command in "${dump_commands[@]}"; do
-    if [[ "${command}" == "${main_command}" ]]; then
-        brew bundle dump --file="${HOME}/.Brewfile" --force
-    fi
-  done
-}
+source $HOME/.scripts/brw.sh
 
 alias macup="brew update && brew upgrade\
  && mas reset && mas upgrade\
  && softwareupdate --download --force\
  && poetry self update\
  && brew bundle cleanup --file=${HOME}/.Brewfile --force"
-
-
