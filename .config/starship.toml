@@ -2,70 +2,8 @@
 success_symbol = "[➜](bold green) "
 error_symbol = "[✗](bold red) "
 
-[python]
-format = "via [${symbol}${pyenv_prefix}(${version} )]($style)"
-symbol = " "
-
 [gcloud]
 disabled = true
 
-[directory]
-read_only = " "
-
-[docker_context]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
-
-[git_branch]
-symbol = " "
-
-[golang]
-symbol = " "
-
-[hg_branch]
-symbol = " "
-
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
-
-[memory_usage]
-symbol = " "
-
-[nim]
-symbol = " "
-
-[nix_shell]
-symbol = " "
-
 [package]
-symbol = " "
 disabled = true
-
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
-
-[ruby]
-symbol = " "
-
-[rust]
-symbol = " "
-
-[scala]
-symbol = " "
-
-[shlvl]
-symbol = " "
-
-[swift]
-symbol = "ﯣ "
