@@ -12,19 +12,8 @@ eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 # https://python-poetry.org
 export PATH="$HOME/.poetry/bin:$PATH"
-# https://github.com/AndreiChenchik/env-wrapper
-env_wrapped=(uvicorn docker-run-with-env deta deta-upd-env-prod deta-upd-env-dev)
-source $HOME/.env-wrapper/activate.sh
-source $HOME/.scripts/1penv.sh
-
-export PATH="$HOME/.scripts/bin:$PATH"
-
-alias dev="cd $HOME/Documents/Developer"
-alias eops="cd $HOME/Documents/enableOps"
-
 # https://www.atlassian.com/git/tutorials/dotfiles
 alias dfs='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
 # https://github.com/Homebrew/brew/issues/3933
 source $HOME/.scripts/brw.sh
 
@@ -33,3 +22,13 @@ alias macup="brew update && brew upgrade\
  && softwareupdate --download --force\
  && poetry self update\
  && brew bundle cleanup --file=${HOME}/.Brewfile --force"
+export PATH="/opt/homebrew/sbin:$PATH"
+
+export PYTHONUNBUFFERED=1
+export PYTHONDONTWRITEBYTECODE=1
+
+export PATH="$HOME/.scripts/bin:$PATH"
+
+# https://github.com/AndreiChenchik/env-injector
+source $HOME/env-injector/activate.sh
+source $HOME/.scripts/1penv.sh
