@@ -28,8 +28,6 @@ export PATH="/opt/homebrew/sbin:$PATH"
 export PYTHONUNBUFFERED=1
 export PYTHONDONTWRITEBYTECODE=1
 
-export PATH="$HOME/.scripts/bin:$PATH"
-
 # Kubernetes
 alias k='kubectl'
 alias ktx='kubectx'
