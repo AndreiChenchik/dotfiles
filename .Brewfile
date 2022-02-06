@@ -9,7 +9,6 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "jzelinskie/duckdns"
 tap "microsoft/git"
-tap "yulrizka/tap"
 brew "argocd"
 brew "cocoapods"
 brew "curlie"
@@ -74,6 +73,7 @@ cask "visual-studio-code"
 cask "vlc"
 cask "yandex-disk"
 cask "zoom"
+mas "1Password 7", id: 1333542190
 mas "Adblock Plus", id: 1432731683
 mas "Amphetamine", id: 937984704
 mas "Clockify Desktop", id: 1364502317
