@@ -13,7 +13,7 @@ brew "argocd"
 brew "cocoapods"
 brew "curlie"
 brew "direnv"
-brew "dnsmasq"
+brew "dnsmasq", link: false
 brew "gh"
 brew "git"
 brew "gnupg"
