@@ -17,10 +17,11 @@ alias dfs='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # https://github.com/Homebrew/brew/issues/3933
 source $HOME/.scripts/brw.sh
 
-alias macup="brew update && brew upgrade\
- && mas reset && mas upgrade\
- && softwareupdate --download --force\
- && poetry self update\
+alias macup="brew update && brew upgrade \
+ && mas reset && mas upgrade \
+ && softwareupdate --list --force \
+ && softwareupdate --download \
+ && poetry self update \
  && brew bundle cleanup --file=${HOME}/.Brewfile --force"
 export PATH="/opt/homebrew/sbin:$PATH"
 
@@ -28,6 +29,13 @@ export PYTHONUNBUFFERED=1
 export PYTHONDONTWRITEBYTECODE=1
 
 export PATH="$HOME/.scripts/bin:$PATH"
+
+# Kubernetes
+alias k='kubectl'
+alias ktx='kubectx'
+alias kns='kubens'
+source <(kubectl completion zsh)
+complete -F __start_kubectl k
 
 # https://github.com/AndreiChenchik/env-injector
 source $HOME/env-injector/activate.sh
