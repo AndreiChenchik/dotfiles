@@ -3,7 +3,7 @@ export PATH=/usr/local/bin:/opt/homebrew/bin:$PATH
 # https://www.deta.sh
 export PATH="$HOME/.deta/bin:$PATH"
 # https://ohmyz.sh
-plugins=(zsh-autosuggestions copydir copyfile history)
+plugins=(zsh-autosuggestions copypath copyfile history)
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 # https://starship.rs
@@ -28,6 +28,9 @@ export PATH="/opt/homebrew/sbin:$PATH"
 export PYTHONUNBUFFERED=1
 export PYTHONDONTWRITEBYTECODE=1
 
+export GITHUB_ORG_IDENTITY=$(cat $HOME/.github_org_identity)
+export VAULT_ADDR="https://vault.chenchik.me"
+
 # Kubernetes
 alias k='kubectl'
 alias ktx='kubectx'
@@ -38,3 +41,19 @@ complete -F __start_kubectl k
 # https://github.com/AndreiChenchik/env-injector
 source $HOME/env-injector/activate.sh
 source $HOME/.scripts/1penv.sh
+
+# # >>> conda initialize >>>
+# # !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/Volumes/External/Users/gumlooter/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/Volumes/External/Users/gumlooter/miniforge3/etc/profile.d/conda.sh" ]; then
+#         . "/Volumes/External/Users/gumlooter/miniforge3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/Volumes/External/Users/gumlooter/miniforge3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# # <<< conda initialize <<<
+
