@@ -57,3 +57,6 @@ source $HOME/.scripts/1penv.sh
 # unset __conda_setup
 # # <<< conda initialize <<<
 
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
