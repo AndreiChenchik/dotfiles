@@ -37,6 +37,7 @@ brew "node"
 brew "pgcli"
 brew "postgresql"
 brew "pulumi"
+brew "pyenv"
 brew "starship"
 brew "swiftlint"
 brew "terraform"
@@ -95,6 +96,7 @@ mas "Clockify Desktop", id: 1364502317
 mas "Dark Reader for Safari", id: 1438243180
 mas "DevCleaner", id: 1388020431
 mas "Developer", id: 640199958
+mas "Disk Speed Test", id: 425264550
 mas "Forematter", id: 1498224474
 mas "Grammarly for Safari", id: 1462114288
 mas "Horo", id: 1437226581
