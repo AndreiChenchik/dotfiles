@@ -23,12 +23,11 @@ git config --global user.email andrei@chenchik.me
 # Restore configs
 dotfiles_dir=".dotfiles"
 git clone --bare https://github.com/AndreiChenchik/dotfiles $HOME/$dotfiles_dir
-alias config='git --git-dir=$HOME/$dotfiles_dir/ --work-tree=$HOME'
 mkdir -p .config-backup && \
-config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+git --git-dir=$HOME/$dotfiles_dir/ --work-tree=$HOME checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
 xargs -I{} mv {} .config-backup/{}
-config checkout
-config config --local status.showUntrackedFiles no
+git --git-dir=$HOME/$dotfiles_dir/ --work-tree=$HOME checkout
+git --git-dir=$HOME/$dotfiles_dir/ --work-tree=$HOME config --local status.showUntrackedFiles no
 
 # Install sowftware
 brew bundle install -f $HOME/.Brewfile
