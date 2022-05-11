@@ -73,7 +73,6 @@ cask "lens"
 cask "logitech-g-hub"
 cask "miro"
 cask "mono-mdk"
-cask "nightowl"
 cask "notion"
 cask "nvidia-geforce-now"
 cask "postman"
@@ -101,11 +100,9 @@ mas "Developer", id: 640199958
 mas "Disk Speed Test", id: 425264550
 mas "Forematter", id: 1498224474
 mas "Grammarly for Safari", id: 1462114288
-mas "Horo", id: 1437226581
 mas "Hush", id: 1544743900
 mas "Notability", id: 360593530
 mas "Notion Web Clipper", id: 1559269364
-mas "Pichon by Icons8", id: 786188363
 mas "TestFlight", id: 899247664
 mas "Twitter", id: 1482454543
 mas "WhatsApp", id: 1147396723
