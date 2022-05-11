@@ -22,7 +22,7 @@ git config --global user.email andrei@chenchik.me
 
 # Restore configs
 dotfiles_dir=".dotfiles"
-git clone --bare <git-repo-url> $HOME/$dotfiles_dir
+git clone --bare https://github.com/AndreiChenchik $HOME/$dotfiles_dir
 alias config='git --git-dir=$HOME/$dotfiles_dir/ --work-tree=$HOME'
 mkdir -p .config-backup && \
 config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
