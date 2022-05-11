@@ -21,16 +21,15 @@ git config --global user.name "Andrei Chenchik"
 git config --global user.email andrei@chenchik.me
 
 # Restore configs
-dotfiles_dir=".dotfiles"
-git clone --bare https://github.com/AndreiChenchik/dotfiles $HOME/$dotfiles_dir
+git clone --bare https://github.com/AndreiChenchik/dotfiles $HOME/.dotfiles
 mkdir -p .config-backup && \
-git --git-dir=$HOME/$dotfiles_dir/ --work-tree=$HOME checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
-xargs -I{} mv {} .config-backup/{}
-git --git-dir=$HOME/$dotfiles_dir/ --work-tree=$HOME checkout
-git --git-dir=$HOME/$dotfiles_dir/ --work-tree=$HOME config --local status.showUntrackedFiles no
+  git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+  xargs -I{} mv {} .config-backup/{}
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
 
 # Install sowftware
-brew bundle install -f $HOME/.Brewfile
+brew bundle install --file=$HOME/.Brewfile
 
 # Install poetry
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
