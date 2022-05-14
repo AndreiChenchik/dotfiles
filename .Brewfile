@@ -19,7 +19,6 @@ brew "datasette"
 brew "delta"
 brew "direnv"
 brew "duf"
-brew "exa"
 brew "gh"
 brew "git"
 brew "gnupg"
@@ -47,34 +46,38 @@ brew "yarn"
 brew "armosec/kubescape/kubescape"
 brew "datawire/blackbird/telepresence-arm64"
 brew "hashicorp/tap/vault"
+cask "1password"
 cask "1password-cli"
-cask "porting-kit"
-cask "db-browser-for-sqlite"
+cask "alt-tab"
+cask "battle-net"
 cask "dbeaver-community"
 cask "discord"
 cask "disk-inventory-x"
 cask "docker"
 cask "dotnet-sdk"
+cask "dropzone"
 cask "endless-sky"
 cask "figma"
 cask "font-fira-code"
 cask "font-fira-code-nerd-font"
 cask "git-credential-manager-core"
 cask "github"
+cask "google-chrome"
 cask "google-cloud-sdk"
 cask "google-drive"
-cask "google-chrome"
 cask "gpg-suite"
 cask "iterm2"
 cask "keybase"
-cask "lens"
 cask "logitech-g-hub"
 cask "miro"
 cask "mono-mdk"
 cask "notion"
 cask "nvidia-geforce-now"
+cask "obsidian"
+cask "porting-kit"
 cask "postman"
 cask "protonvpn"
+cask "rectangle"
 cask "scroll-reverser"
 cask "signal"
 cask "slack"
@@ -86,9 +89,9 @@ cask "the-unarchiver"
 cask "unity-hub"
 cask "visual-studio-code"
 cask "vlc"
-cask "warp"
+cask "yandex-disk"
 cask "zoom"
-mas "1Password 7", id: 1333542190
+mas "1Password for Safari", id: 1569813296
 mas "Adblock Plus", id: 1432731683
 mas "Amphetamine", id: 937984704
 mas "Clockify Desktop", id: 1364502317
@@ -100,8 +103,6 @@ mas "Forematter", id: 1498224474
 mas "Grammarly for Safari", id: 1462114288
 mas "Hush", id: 1544743900
 mas "Notability", id: 360593530
-mas "Notion Web Clipper", id: 1559269364
-mas "TestFlight", id: 899247664
+mas "Playgrounds", id: 1496833156
 mas "Twitter", id: 1482454543
-mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835

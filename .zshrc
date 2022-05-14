@@ -28,7 +28,7 @@ export PATH="/opt/homebrew/sbin:$PATH"
 export PYTHONUNBUFFERED=1
 export PYTHONDONTWRITEBYTECODE=1
 
-export GITHUB_ORG_IDENTITY=$(cat $HOME/.github_org_identity)
+#export GITHUB_ORG_IDENTITY=$(cat $HOME/.github_org_identity)
 export VAULT_ADDR="https://vault.chenchik.me"
 
 # Kubernetes
@@ -39,7 +39,7 @@ source <(kubectl completion zsh)
 complete -F __start_kubectl k
 
 # https://github.com/AndreiChenchik/env-injector
-source $HOME/env-injector/activate.sh
+#source $HOME/env-injector/activate.sh
 source $HOME/.scripts/1penv.sh
 
 # # >>> conda initialize >>>
