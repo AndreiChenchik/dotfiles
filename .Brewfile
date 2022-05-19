@@ -43,11 +43,13 @@ brew "tree"
 brew "vapor"
 brew "vips"
 brew "yarn"
+brew "ykman"
 brew "armosec/kubescape/kubescape"
 brew "datawire/blackbird/telepresence-arm64"
 brew "hashicorp/tap/vault"
 cask "1password"
 cask "1password-cli"
+cask "aethersx2"
 cask "alt-tab"
 cask "battle-net"
 cask "brave-browser"
@@ -64,6 +66,7 @@ cask "font-fira-code"
 cask "font-fira-code-nerd-font"
 cask "git-credential-manager-core"
 cask "github"
+cask "gog-galaxy"
 cask "google-cloud-sdk"
 cask "google-drive"
 cask "gpg-suite"
@@ -111,3 +114,4 @@ mas "Notability", id: 360593530
 mas "Playgrounds", id: 1496833156
 mas "Twitter", id: 1482454543
 mas "Xcode", id: 497799835
+mas "Yubico Authenticator", id: 1497506650
