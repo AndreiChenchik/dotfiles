@@ -19,6 +19,9 @@ brew update
 # Setup git
 git config --global user.name "Andrei Chenchik"
 git config --global user.email andrei@chenchik.me
+git config --global user.signingKey A688B7C116CA5B13
+git config --global commit.gpgsign true
+git config --global gpg.program /usr/local/bin/gpg
 
 # Restore configs
 git clone --bare https://github.com/AndreiChenchik/dotfiles $HOME/.dotfiles
