@@ -16,6 +16,8 @@ export PATH="$HOME/.poetry/bin:$PATH"
 alias dfs='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # https://github.com/Homebrew/brew/issues/3933
 source $HOME/.scripts/brw.sh
+# https://stackoverflow.com/questions/68573454/having-difficulty-to-get-ssh-with-a-yubikey-working-with-macos-monterey
+export PATH=$(brew --prefix openssh)/bin:$PATH
 
 alias macup="brew update && brew upgrade \
  && mas reset && mas upgrade \
