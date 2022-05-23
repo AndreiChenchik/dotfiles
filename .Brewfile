@@ -56,6 +56,7 @@ cask "aethersx2"
 cask "alt-tab"
 cask "battle-net"
 cask "brave-browser"
+cask "dash"
 cask "dbeaver-community"
 cask "discord"
 cask "disk-inventory-x"
@@ -64,6 +65,7 @@ cask "dotnet-sdk"
 cask "dropzone"
 cask "endless-sky"
 cask "exodus"
+cask "fig"
 cask "figma"
 cask "font-fira-code"
 cask "font-fira-code-nerd-font"
@@ -94,22 +96,21 @@ cask "slack"
 cask "spotify"
 cask "steam"
 cask "sublime-text"
-cask "telegram"
+cask "telegram-desktop"
 cask "the-unarchiver"
 cask "unity-hub"
 cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
-cask "yandex-disk"
 cask "zoom"
 mas "1Password for Safari", id: 1569813296
 mas "Adblock Plus", id: 1432731683
 mas "Amphetamine", id: 937984704
-mas "Clockify Desktop", id: 1364502317
 mas "Dark Reader for Safari", id: 1438243180
 mas "DevCleaner", id: 1388020431
 mas "Developer", id: 640199958
 mas "Disk Speed Test", id: 425264550
+mas "EasyRes", id: 688211836
 mas "Forematter", id: 1498224474
 mas "Grammarly for Safari", id: 1462114288
 mas "Hush", id: 1544743900
