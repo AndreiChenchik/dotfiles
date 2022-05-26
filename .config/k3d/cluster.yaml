@@ -6,7 +6,7 @@ metadata:
 servers: 1 # same as `--servers 1`
 agents: 2 # same as `--agents 2`
 volumes: # repeatable flags are represented as YAML lists
-  - volume: /Volumes/Cluster:/var/lib/rancher/k3s/storage # same as `--volume '/my/host/path:/path/in/node@server:0;agent:*'`
+  - volume: /Volumes/Cluster/PVC:/var/lib/rancher/k3s/storage # same as `--volume '/my/host/path:/path/in/node@server:0;agent:*'`
     nodeFilters:
       - server:0
       - agent:*
