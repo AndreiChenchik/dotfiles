@@ -24,6 +24,13 @@ export PATH="$HOME/.poetry/bin:$PATH"
 
 # https://kubernetes.io/docs/tasks/tools/included/optional-kubectl-configs-zsh/
 source <(kubectl completion zsh)
+# https://www.studytonight.com/post/how-to-list-all-resources-in-a-kubernetes-namespace
+function kubectlgetall {
+  for i in $(kubectl api-resources --verbs=list --namespaced -o name | grep -v "events.events.k8s.io" | grep -v "events" | sort | uniq); do
+    echo "Resource:" $i
+    kubectl -n ${1} get --ignore-not-found ${i}
+  done
+}
 
 
 # https://docs.python.org/3/using/cmdline.html
