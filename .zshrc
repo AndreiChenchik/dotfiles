@@ -1,6 +1,7 @@
 # Fig pre block. Keep at the top of this file.
 . "$HOME/.fig/shell/zshrc.pre.zsh"
-
+autoload -Uz compinit
+compinit
 
 # https://www.atlassian.com/git/tutorials/dotfiles
 alias dfs='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
