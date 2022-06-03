@@ -32,16 +32,11 @@ function kubectlgetall {
     kubectl -n ${1} get --ignore-not-found ${i}
   done
 }
-
+. <(flux completion zsh)
 
 # https://docs.python.org/3/using/cmdline.html
 export PYTHONUNBUFFERED=1
 export PYTHONDONTWRITEBYTECODE=1
-# https://github.com/pyenv/pyenv#set-up-your-shell-environment-for-pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 
 #export GITHUB_ORG_IDENTITY=$(cat $HOME/.github_org_identity)
 #export VAULT_ADDR="https://vault.chenchik.me"
